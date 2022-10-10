@@ -1,17 +1,16 @@
-Shader "Custom/Shader03_Interface"
+Shader "Lecture/CustomShader/Sphere04_texture"
 {
 	Properties
 	{
-		_Color ("Color", Color) = (1,1,1,1)
+		// 인스펙터 창에 표시되는 인터페이스들
+		// 큰따옴표 안에 있는 이름이 인스펙터에서 보이는 이름
+		// 여기서는 줄이 끝날 때 세미콜론 안 찍는다.
+		//_Color ("Color", Color) = (1,1,1,1) // color 없이 텍스쳐만 받기
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
-		_Red ("Red", Range(0, 1)) = 0
-		_Green ("Green", Range(0, 1)) = 0
-		_Blue ("Blue", Range(0, 1)) = 0
 	}
 	SubShader
 	{
 		Tags { "RenderType"="Opaque" }
-		LOD 200
 
 		CGPROGRAM
 		#pragma surface surf Standard fullforwardshadows
@@ -23,15 +22,10 @@ Shader "Custom/Shader03_Interface"
 			float2 uv_MainTex;
 		};
 
-		fixed4 _Color;
-		float _Red;
-		float _Green;
-		float _Blue;
-
 		void surf (Input IN, inout SurfaceOutputStandard o)
 		{
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			o.Albedo = float3(_Red, _Green, _Blue);
+			fixed4 c = tex2D (_MainTex, IN.uv_MainTex); // * _Color;
+			o.Albedo = c.rgb; // 천연색
 			o.Alpha = c.a;
 		}
 		ENDCG

@@ -1,4 +1,4 @@
-Shader "Custom/Shader03_Interface"
+Shader "Lecture/CustomShader/Sphere03_addInteface"
 {
 	Properties
 	{
@@ -11,7 +11,6 @@ Shader "Custom/Shader03_Interface"
 	SubShader
 	{
 		Tags { "RenderType"="Opaque" }
-		LOD 200
 
 		CGPROGRAM
 		#pragma surface surf Standard fullforwardshadows
@@ -30,7 +29,9 @@ Shader "Custom/Shader03_Interface"
 
 		void surf (Input IN, inout SurfaceOutputStandard o)
 		{
+			// Albedo comes from a texture tinted by color
 			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+			//o.Albedo = c.rgb;
 			o.Albedo = float3(_Red, _Green, _Blue);
 			o.Alpha = c.a;
 		}

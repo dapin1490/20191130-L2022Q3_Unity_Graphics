@@ -1,17 +1,12 @@
-Shader "Custom/Shader03_Interface"
+Shader "Lecture/ExampleShader/quad02"
 {
 	Properties
 	{
-		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
-		_Red ("Red", Range(0, 1)) = 0
-		_Green ("Green", Range(0, 1)) = 0
-		_Blue ("Blue", Range(0, 1)) = 0
 	}
 	SubShader
 	{
 		Tags { "RenderType"="Opaque" }
-		LOD 200
 
 		CGPROGRAM
 		#pragma surface surf Standard fullforwardshadows
@@ -24,14 +19,15 @@ Shader "Custom/Shader03_Interface"
 		};
 
 		fixed4 _Color;
-		float _Red;
-		float _Green;
-		float _Blue;
 
 		void surf (Input IN, inout SurfaceOutputStandard o)
 		{
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			o.Albedo = float3(_Red, _Green, _Blue);
+			// Albedo comes from a texture tinted by color
+			fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
+			o.Albedo = c.rgb;
+			o.Emission = float3(IN.uv_MainTex.x, IN.uv_MainTex.y, 0);
+			//o.Emission = IN.uv_MainTex.x;
+			//o.Emission = IN.uv_MainTex.y;
 			o.Alpha = c.a;
 		}
 		ENDCG
