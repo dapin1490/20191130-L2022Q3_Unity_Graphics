@@ -1,4 +1,4 @@
-Shader "Lecture/CustomShader/Sphere02_simplify"
+Shader "Lecture/week05/Custom/Sphere02_simplify"
 {
 	Properties
 	{

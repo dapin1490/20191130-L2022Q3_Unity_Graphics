@@ -1,4 +1,4 @@
-Shader "Lecture/ExampleShader/cube_dbTexAlpha"
+Shader "Lecture/week05/Example/cube_dbTexAlpha"
 {
 	Properties
 	{

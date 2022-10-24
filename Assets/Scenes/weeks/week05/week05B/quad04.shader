@@ -1,4 +1,4 @@
-Shader "Lecture/ExampleShader/quad04"
+Shader "Lecture/week05/Example/quad04"
 {
 	Properties
 	{

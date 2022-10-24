@@ -1,4 +1,4 @@
-Shader "Lecture/CustomShader/Sphere04_texture"
+Shader "Lecture/week05/Custom/Sphere04_texture"
 {
 	Properties
 	{

@@ -1,4 +1,4 @@
-Shader "Lecture/ExampleShader/cube_texture"
+Shader "Lecture/week05/Example/cube_texture"
 {
 	Properties
 	{

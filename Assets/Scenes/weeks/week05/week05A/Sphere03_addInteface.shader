@@ -1,4 +1,4 @@
-Shader "Lecture/CustomShader/Sphere03_addInteface"
+Shader "Lecture/week05/Custom/Sphere03_addInteface"
 {
 	Properties
 	{
