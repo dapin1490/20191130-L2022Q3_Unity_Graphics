@@ -6,15 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/week08A_LoadScene/LoadSceneTest01.unity
-    guid: 8c3a70ebb7ed9cb48920d9e942646569
-  - enabled: 1
-    path: Assets/week08A_LoadScene/LoadSceneTest02.unity
-    guid: ec970bdd6d324be45b82f051640066d2
-  - enabled: 1
-    path: Assets/Scenes/weeks/week08/week08A/week08A_scene01.unity
-    guid: 980ed591ef88d6142b23b027cb5311d6
-  - enabled: 1
-    path: Assets/Scenes/weeks/week08/week08A/week08A_scene02.unity
-    guid: fb3e6d301d4c4db4d84c51ade03a05af
+    path: Assets/Scenes/weeks/week14/week14_UV.unity
+    guid: d46c9c26731b1c145b86c26b623064ea
   m_configObjects: {}
