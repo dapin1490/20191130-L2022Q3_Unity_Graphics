@@ -6,9 +6,9 @@ public class MeshScrt_Plane : MonoBehaviour
 {
     public Vector3[] newvert;
     public int[] newtrian;
-    // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+    // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
     public Texture mainTex;
-    // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+    // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +26,9 @@ public class MeshScrt_Plane : MonoBehaviour
         Shader DefSha = Shader.Find("Standard");
         Material DefMat = new Material(DefSha);
 
-        // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+        // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
         DefMat.SetTexture("_MainTex", mainTex);
-        // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+        // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
 
         gameObject.GetComponent<MeshRenderer>().material = DefMat;
     }

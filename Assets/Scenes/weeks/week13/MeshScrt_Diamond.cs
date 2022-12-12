@@ -7,11 +7,11 @@ public class MeshScrt_Diamond : MonoBehaviour
     Vector3 V0, V1, V2, V3, V4, V5;
     Vector3[] newvert;
     int[] newtrian;
-    // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+    // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
     public Texture mainTex;
     //float[] color_code = { 1f, 1f, 1f, 1f };
     //Color[] colors = { Color.black, Color.blue, Color.clear, Color.cyan, Color.gray, Color.green, Color.grey, Color.magenta, Color.red, Color.white, Color.yellow };
-    // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+    // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class MeshScrt_Diamond : MonoBehaviour
             0, 4, 3,
             3, 4, 2,
             2, 4, 1,
-            1, 4, 0, // ¿©±â±îÁö À­ºÎºÐ
+            1, 4, 0, // ì—¬ê¸°ê¹Œì§€ ìœ—ë¶€ë¶„
             0, 3, 5,
             3, 2, 5,
             2, 1, 5,
@@ -50,16 +50,16 @@ public class MeshScrt_Diamond : MonoBehaviour
 
         gameObject.GetComponent<MeshRenderer>().material = DefMat;
         
-        // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+        // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
         gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", mainTex);
         gameObject.AddComponent<MeshCollider>();
-        // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+        // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
     }
 
     // Update is called once per frame
     void Update()
     {
-        // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+        // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
         if (Random.Range(1, 121) % 30 == 0)
         {
             // gameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", colors[++c_index % colors.Length]);
@@ -67,6 +67,6 @@ public class MeshScrt_Diamond : MonoBehaviour
                 new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f),
                 Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f)));
         }
-        // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+        // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
     }
 }

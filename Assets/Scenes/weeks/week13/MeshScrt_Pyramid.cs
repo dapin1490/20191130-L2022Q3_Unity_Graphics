@@ -7,10 +7,10 @@ public class MeshScrt_Pyramid : MonoBehaviour
     Vector3 V0, V1, V2, V3, V4;
     Vector3[] newvert;
     int[] newtrian;
-    // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+    // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
     int c_index = 0;
     Color[] colors = { Color.black, Color.blue, Color.clear, Color.cyan, Color.gray, Color.green, Color.grey, Color.magenta, Color.red, Color.white, Color.yellow };
-    // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+    // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
 
     // Start is called before the first frame update
     void Start()
@@ -50,9 +50,9 @@ public class MeshScrt_Pyramid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+        // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
         if (++c_index % 29 == 0)
             gameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", colors[++c_index % colors.Length]);
-        // ¼ö¾÷ ³»¿ë ¾Æ´Ô
+        // ìˆ˜ì—… ë‚´ìš© ì•„ë‹˜
     }
 }
